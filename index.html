@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compailer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&family=Roboto:wght@100;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Symulator</h1>
+        <h2>Symulator rozkazu MOV i XCHG dla rejestru AX BX CX DX</h3>
+            <div class="zad1">
+                <p>Podaj wartość w systemie hex</p>
+                <input type="text" class="myValue" placeholder="Podaj wartość">
+                <p>Wybierz rejstr w którym zapisuujesz </p>
+                <select class="register select1">
+                    <option value="AX">AX</option>
+                    <option value="BX">BX</option>
+                    <option value="CX">CX</option>
+                    <option value="DX">DX</option>
+                </select>
+                <div class="answer"></div>
+                <div><button class="downloadhex btn">Klikni mnie</button></div>
+            </div>
+
+
+            <h3>MOV Rozkaz przyekazujący zawartość wybranego przez nas pliku do drugiego </h3>
+            <div class="mov">
+                <div><button class="btnsend btn2">MOV</button></div>
+
+                <select class="sentfirst">
+                    <option value="AX">AX</option>
+                    <option value="BX">BX</option>
+                    <option value="CX">CX</option>
+                    <option value="DX">DX</option>
+                </select>
+
+                <p>,</p>
+
+
+                <select class="sentsecond">
+                    <option value="AX">AX</option>
+                    <option value="BX">BX</option>
+                    <option value="CX">CX</option>
+                    <option value="DX">DX</option>
+                </select>
+
+            </div>
+
+
+            <h3>XCHG rozkaz zamieniający zawartość między wybranymi rejestrami</h3>
+            <div class="xchg">
+                <div><button class="btnswap btn2">XCHG</button></div>
+
+
+                <select class="send">
+                    <option value="AX">AX</option>
+                    <option value="BX">BX</option>
+                    <option value="CX">CX</option>
+                    <option value="DX">DX</option>
+                </select>
+
+
+                <p>,</p>
+
+                <select class="download">
+                    <option value="AX">AX</option>
+                    <option value="BX">BX</option>
+                    <option value="CX">CX</option>
+                    <option value="DX">DX</option>
+                </select>
+
+            </div>
+
+
+            <div><button class="show btn">pokaż zapisane wartoś </button></div>
+
+
+
+
+            <div class="popup active">
+                <h3>Wartość rejestrów:</h3>
+                <div class="popup-body">
+                    <p class="inPopup"> AX : <span class="showa"></span></p>
+                    <p class="inPopup"> BX : <span class="showb"></span></p>
+                    <p class="inPopup"> CX : <span class="showc"></span></p>
+                    <p class="inPopup"> DX : <span class="showd"></span></p>
+
+                </div>
+                <button class="close-modal">x</button>
+            </div>
+    </div>
+
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
